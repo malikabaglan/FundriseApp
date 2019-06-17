@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CampgaignPOC" 
+             x:Class="CampgaignPOC.View.MainPage"
+             BackgroundColor="Wheat">
+    
+    <ScrollView>
+             <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                
+              
+            </Grid.RowDefinitions>
+                <Image Grid.Row="0" 
+                       Source="xamLogo.png"    
+                       Aspect="AspectFill" 
+                       HeightRequest="200" 
+                       WidthRequest="300" />
+        
+         <Grid Grid.Row="1" RowSpacing="20" Padding="20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              
+            </Grid.RowDefinitions>
+
+  <local:CustomEntry Grid.Column="0"
+                                   
+                                   Placeholder="Uaename"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="#3380FF"
+                                   WidthRequest="40"
+                            
+                                   BorderColor="Blue"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                 >
+                </local:CustomEntry>
+        
+    
+        
+        <Entry Grid.Row="1"  Placeholder="Username" HeightRequest="40"/>
+       
+       <Entry Grid.Row="2" Placeholder="Password" HeightRequest="40"/>
+        
+        
+        
+        <Grid Grid.Row="3" ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            
+            
+                <Label Grid.Column="0" Text="Remember me"/>
+            
+                <Switch Grid.Column="1" IsToggled="false" />
+            <local:CustomButtons 
+                        Grid.Column="2" x:Name="btnSignin1" 
+                        CustomBorderColor="#ffffcc"
+                        Command="{Binding SigninCommand}" 
+                        HeightRequest="40"   
+                        WidthRequest="130"
+                        CustomBackgroundColor="Black" 
+                        Text="Sign In"
+                        TextColor="White" 
+                        CustomBorderRadius="4"
+                        CustomBorderWidth="4" 
+                        VerticalOptions="Center" />
+      
+     </Grid>
+        <local:CustomButtons  Grid.Row="4" 
+                              x:Name="btnSignin0" 
+                              CustomBorderColor="#ffffcc"
+                              CustomBackgroundColor="#3b5998" 
+                              Text="Sign In with Facebook"
+                              TextColor="White" 
+                              CustomBorderRadius="4" 
+                              CustomBorderWidth="4" 
+                              VerticalOptions="Center"/>
+        
+        <local:CustomButtons Grid.Row="5"  
+                             x:Name="btnSignin" 
+                             CustomBorderColor="#ffffcc"
+                             CustomBackgroundColor="#3393FF" 
+                             Text="Sign In with Google"
+                             TextColor="White" 
+                             CustomBorderRadius="4" 
+                             CustomBorderWidth="4" 
+                             VerticalOptions="Center"/>
+        
+        
+       
+    
+        
+        
+  </Grid>
+        </Grid>
+        </ScrollView>
+</ContentPage>

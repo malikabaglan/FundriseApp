@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CampgaignPOC.VerificationPage"
+                         xmlns:local="clr-namespace:CampgaignPOC" 
+             BackgroundColor="Wheat">
+    
+<ScrollView>
+        <Grid Padding="30" RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                  
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Verification Required"
+                       FontSize="Large" TextColor="Teal"
+                       HorizontalOptions="CenterAndExpand" />
+                <Image Grid.Column="1" HeightRequest="20" WidthRequest="20" 
+                       HorizontalOptions="End" Source="clear.png"/>
+            </Grid>
+            
+            <Label Grid.Row="1" LineBreakMode="CharacterWrap"
+                   Text="For extra security,add a phone number.Before alllowing access to personal information.we will send a unique code to this phone to verify your identity"
+                   />
+           
+            
+            
+             <local:CustomPicker Grid.Row="2"  
+                                 HorizontalOptions="FillAndExpand"
+                          HeightRequest="40"
+                            WidthRequest="40"
+                     Image="select"
+                                ImageHeight="20"
+                                ImageWidth="20"
+                                BorderColor="Purple"
+                                TitleColor="Gray"
+                                BorderWidth="1"
+                                BackgroundColor="White"
+                                TextColor="Black"
+                             CornerRadius="5"
+                                IsCurvedCornersEnabled="true"
+                                ImageAlignment="Right"
+                     Title="Country Code">
+                      <local:CustomPicker.Items>
+                        <x:String>US</x:String> 
+                        <x:String>Canada</x:String>
+                    </local:CustomPicker.Items>
+            </local:CustomPicker> 
+            
+            
+            
+            
+            
+               <local:CustomEntry Grid.Row="3"
+                                   
+                                   Placeholder="Phone Number"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+            
+           <Label Grid.Row="4" Text="How should we send the unique code?"/>
+            <Grid Grid.Row="5">
+             <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label  Grid.Column="0" Text="Text Message"/>
+                <Switch Grid.Column="1" IsToggled="true"/>
+            </Grid>
+            
+            
+              <Grid Grid.Row="6">
+             <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label  Grid.Column="0" Text="Voice call"/>
+                <Switch Grid.Column="1" IsToggled="false"/>
+            </Grid>
+            
+
+            
+            
+            
+                   <local:CustomButtons Grid.Row="7"  
+                                
+                             CustomBorderColor="#ffffcc"
+                              CustomBackgroundColor="Orange" 
+                               Text="Submit phone number"
+                                TextColor="White" CustomBorderRadius="4" 
+                                 FontSize="Medium"
+                                  CustomBorderWidth="4" 
+                                    VerticalOptions="Center" 
+                                        Command="{Binding SentTheCode}"/>
+            
+            
+            
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

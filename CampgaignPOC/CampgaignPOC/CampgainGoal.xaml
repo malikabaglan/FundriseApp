@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CampgaignPOC.CampgainGoal"
+            
+             xmlns:local="clr-namespace:CampgaignPOC" 
+             BackgroundColor="Wheat">
+ <ScrollView>
+   
+            <Grid RowSpacing="20" Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                 <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                
+                
+                <Image Grid.Row="0" 
+                       Source="imageUpload.png" 
+                       VerticalOptions="Center"
+                       HeightRequest="150"></Image>
+         
+            
+            <Grid Grid.Row="1"  
+                  RowSpacing="0">
+               <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                </Grid.RowDefinitions>
+             
+                
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>  
+                    <ColumnDefinition Width="30"/>  
+               </Grid.ColumnDefinitions>
+                
+                    
+                    <Image Grid.Column="0" 
+                           Source="clear.png"
+                           WidthRequest="20" 
+                           HeightRequest="20"></Image>
+                     <local:CustomEntry  Grid.Column="1"
+                              Placeholder="Enter Amount" 
+                              HorizontalTextAlignment="Center" 
+                              PlaceholderColor="Gray"
+                              EntryID="1">
+                    </local:CustomEntry>
+                     <Image Grid.Column="2" Source="usd.png"
+                       WidthRequest="20" HeightRequest="20"></Image>
+                </Grid>
+                
+                <BoxView  Grid.Row="1" HorizontalOptions="FillAndExpand" 
+                         BackgroundColor="Green"></BoxView>
+               </Grid>
+    
+        
+            <Label Grid.Row="2" 
+                   Text="Start with the realistick achivable goal.You can always increase it later.Donation can be withdrawn at aby time,even if you did not hit the goal" 
+                   LineBreakMode="WordWrap"
+                   TextColor="Gray" FontSize="15"></Label>
+            
+           
+            <local:CustomPicker Grid.Row="3"  HorizontalOptions="FillAndExpand"
+                          HeightRequest="40"
+                                   WidthRequest="40"
+                     Image="select"
+                                ImageHeight="20"
+                                ImageWidth="20"
+                                BorderColor="Purple"
+                                TitleColor="Gray"
+                                BorderWidth="1"
+                                BackgroundColor="White"
+                                TextColor="Black"
+                             CornerRadius="5"
+                                IsCurvedCornersEnabled="true"
+                                ImageAlignment="Right"
+                     Title="Category">
+                      <local:CustomPicker.Items>
+                        <x:String>English</x:String> 
+                        <x:String>Russian</x:String>
+                    </local:CustomPicker.Items>
+            </local:CustomPicker> 
+            
+         
+      <Label Grid.Row="4" Text="Fundrise as:"  TextColor="Black"/>
+      
+            
+            
+            
+             <Grid Grid.Row="5" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+                
+             <Switch Grid.Column="0" IsToggled="false" />
+                <Label Grid.Column="1" Text="As Individual"  ></Label>
+                     </Grid>
+                 <Grid Grid.Row="6" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+                
+             <Switch Grid.Column="0" IsToggled="false" />
+                <Label Grid.Column="1" Text="As Organization"  ></Label>
+                </Grid>
+            
+            <Label Grid.Row="7" Text="Transaction free is 6%"/>
+            <Label Grid.Row="8" Text="By continuing you agree to our terms,conditions and privacy policy" 
+                   LineBreakMode="WordWrap"/>
+            
+                    <local:CustomButtons  Grid.Row="9" 
+                              x:Name="btnSignin0" 
+                              CustomBorderColor="#ffffcc"
+                              CustomBackgroundColor="#3b5998" 
+                              Text="Continue"
+                              TextColor="White" 
+                              CustomBorderRadius="4" 
+                              CustomBorderWidth="4" 
+                              VerticalOptions="Center"
+                      Command="{Binding ContinueCommand}"/>
+        
+            
+            
+            </Grid>
+       
+    </ScrollView>
+    
+    
+</ContentPage>

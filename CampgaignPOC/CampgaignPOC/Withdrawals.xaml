@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CampgaignPOC.Withdrawals"
+                xmlns:local="clr-namespace:CampgaignPOC" 
+             BackgroundColor="Wheat">
+<ScrollView>
+        <Grid Padding="20" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                  <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" LineBreakMode="WordWrap"
+                   Text="What type of bank account will be used to withdraw"
+                   HorizontalTextAlignment="Start"
+                   HorizontalOptions="StartAndExpand"/>
+
+            
+             <local:CustomPicker Grid.Row="1"  
+                                 HorizontalOptions="FillAndExpand"
+                          HeightRequest="40"
+                            WidthRequest="40"
+                     Image="select"
+                                ImageHeight="20"
+                                ImageWidth="20"
+                                BorderColor="Purple"
+                                TitleColor="Gray"
+                                BorderWidth="1"
+                                BackgroundColor="White"
+                                TextColor="Black"
+                             CornerRadius="5"
+                                IsCurvedCornersEnabled="true"
+                                ImageAlignment="Right"
+                     Title="Personal">
+                      <local:CustomPicker.Items>
+                        <x:String>Visa</x:String> 
+                        <x:String>AMEX</x:String>
+                    </local:CustomPicker.Items>
+            </local:CustomPicker> 
+            
+            
+            <Label Grid.Row="3" LineBreakMode="WordWrap"
+                   Text="Account can belong to a person or an organization (501(c)(3),business,trust,etc.).For organizations,the individual withdrawing must be a beneficial owner,someone with significant responsibility to control,manage,or direct the organization(e.g.,a Chief Executive Officer,Vice President,Treasurer,or a Controller)"
+                    HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" 
+                   TextColor="Gray"/>
+            
+            
+        
+               <local:CustomEntry Grid.Row="4"
+                                   
+                                   Placeholder="First Name"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+            
+              <local:CustomEntry Grid.Row="5"
+                                   
+                                   Placeholder="Last Name"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+              <local:CustomEntry Grid.Row="6"
+                                   
+                                   Placeholder="Address"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+            
+            
+              <local:CustomEntry Grid.Row="7"
+                                   
+                                   Placeholder="State"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+            
+            
+            
+              <local:CustomEntry Grid.Row="8"
+                                   
+                                   Placeholder="Zip Code"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+            
+            
+            
+         <local:CustomPicker Grid.Row="9"  
+                                 HorizontalOptions="FillAndExpand"
+                          HeightRequest="40"
+                            WidthRequest="40"
+                     Image="select"
+                                ImageHeight="20"
+                                ImageWidth="20"
+                                BorderColor="Purple"
+                                TitleColor="Gray"
+                                BorderWidth="1"
+                                BackgroundColor="White"
+                                TextColor="Black"
+                             CornerRadius="5"
+                                IsCurvedCornersEnabled="true"
+                                ImageAlignment="Right"
+                     Title="Country">
+                      <local:CustomPicker.Items>
+                        <x:String>USA</x:String> 
+                        <x:String>Canada</x:String>
+                    </local:CustomPicker.Items>
+            </local:CustomPicker>    
+            
+             
+                <Label Grid.Row="10" Text="Date of Birth"/>
+            
+            <Grid Grid.Row="11" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                 
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                         <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+               
+                 <local:CustomEntry Grid.Column="0"
+                                   
+                                   Placeholder="Month"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+                 <local:CustomEntry Grid.Column="1"
+                                   
+                                   Placeholder="Day"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+                
+                <local:CustomEntry Grid.Column="2"
+                                   
+                                   Placeholder="Year"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            </Grid>
+            
+             <local:CustomButtons Grid.Row="12"  
+                                
+                             CustomBorderColor="#ffffcc"
+                            
+                                 CustomBackgroundColor="Orange" 
+                                  Text="Next"
+                                 TextColor="White" CustomBorderRadius="4" 
+                             FontSize="Medium"
+                             CustomBorderWidth="4" 
+             Command="{Binding SaveCommand}"
+                             
+                             VerticalOptions="Center" />
+            
+            
+            <Label Grid.Row="13" Text="Need help?" 
+                   HorizontalOptions="StartAndExpand"
+                   TextColor="Gray"/>
+            
+            
+            
+            
+            
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

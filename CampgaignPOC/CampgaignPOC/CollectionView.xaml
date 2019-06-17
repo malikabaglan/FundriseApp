@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CampgaignPOC.CollectionView"
+               xmlns:local="clr-namespace:CampgaignPOC" 
+             xmlns:controls="clr-namespace:CampgaignPOC"
+             BackgroundColor="Wheat">
+    
+    <ScrollView>
+                   
+        
+        
+        
+        <Grid Padding="20" RowSpacing="30">
+           <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
+            </Grid.RowDefinitions> 
+            
+            <Image   Grid.Row="0" Source="Followup.png" HeightRequest="100" 
+                   VerticalOptions="Center"/>
+            
+           
+
+            
+            
+           <controls:ExtendedEditorControl Grid.Row="1"
+                                           HasRoundedCorner="true"
+                                          IsExpandable="true"
+                                          Placeholder="Title"
+                                          PlaceholderColor="Gray"
+                                           BackgroundColor="White"
+                                           MaxLength="250"
+                                           Keyboard="Text"
+                                           
+                                           />
+          
+<Label Grid.Row="2" Text="A good title is unique,eye-catching and briefly describes  the campaign" 
+                               TextColor="Gray" 
+ />
+            
+            
+             <local:CustomButtons Grid.Row="3" Margin="0,0,0,200"
+                             CustomBorderColor="#ffffcc"
+                             CustomBackgroundColor="Orange" 
+                             Text="Submit"
+                             TextColor="White" 
+                             CustomBorderRadius="4"
+                                   Command="{Binding StartFundCommand}"
+                             CustomBorderWidth="4" 
+                             VerticalOptions="Center"/>
+            
+           
+        </Grid>
+        
+        
+        
+<!--
+      <Grid Padding="20">
+     
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+             
+                 <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+       
+            <Button Grid.Row="0"  Command="{Binding StartFundCommand}" Text=" Start A fund"/>
+   
+            
+            <local:CustomButtons Grid.Row="1"  CustomBorderColor="#ffffcc"
+                            
+     CustomBackgroundColor="#3393FF" Text="Start a fund"
+TextColor="Black" CustomBorderRadius="4" CustomBorderWidth="4" VerticalOptions="Start" />
+       
+            
+    <StackLayout Padding="50">
+      
+        
+        
+        
+        <CollectionView  ItemsSource="{Binding Peoples}">
+                    
+            <CollectionView.ItemsLayout >
+                <GridItemsLayout Orientation="Vertical" 
+                                     Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate >
+                    <ContentView Padding="5">
+                        <Frame HasShadow="False"
+                                   BorderColor="Gray"
+                                   CornerRadius="3">
+
+                            <Grid RowSpacing="5" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                         <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" 
+                                           Text="{Binding Name}"
+                                           LineBreakMode="TailTruncation"
+                                           FontSize="15"
+                                           Margin="-15"/>
+                                <Image Grid.Row="1"
+                                           Source="{Binding ImageUrl}"
+                                           WidthRequest="25"
+                                           HeightRequest="25"
+                                           Aspect="AspectFill"/>
+                                
+                                <Label Grid.Row="2" Text="Chicago,Il" TextColor="Black"  
+                                       FontSize="13" ></Label>
+                            </Grid>
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+               </StackLayout>    
+   
+
+          </Grid>-->
+        </ScrollView>
+</ContentPage>

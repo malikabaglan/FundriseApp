@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:local="clr-namespace:CampgaignPOC"
+             x:Class="CampgaignPOC.Donate"
+             BackgroundColor="wHEAT"
+             >
+    <ScrollView>
+        <StackLayout>
+            
+           <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Enter your Donation" 
+                       TextColor="Black"
+                       FontSize="Medium"
+                       />
+            </Grid> 
+            
+        <Grid BackgroundColor="#EAFF33" RowSpacing="10" Padding="10" >
+            <Grid.RowDefinitions>
+               <RowDefinition Height="Auto"></RowDefinition> 
+              <RowDefinition Height="100"></RowDefinition> 
+        <RowDefinition Height="Auto"></RowDefinition> 
+                    
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="usd.png"
+                   HeightRequest="50" WidthRequest="50"
+                   HorizontalOptions="StartAndExpand" ></Image>
+            <Entry Grid.Row="1" Placeholder=".00" 
+                   BackgroundColor="#EAFF33"
+                   PlaceholderColor="Black"
+                   HorizontalOptions="CenterAndExpand" FontSize="100"/>
+                <Label Grid.Row="2" Text="USD" 
+                       TextColor="Black" HorizontalOptions="EndAndExpand"/>
+       </Grid>
+            
+            
+        
+         <Grid BackgroundColor="#EAFF33" Margin="0,15" Padding="30"
+               RowSpacing="10">
+            <Grid.RowDefinitions>
+               <RowDefinition Height="Auto"></RowDefinition> 
+                               <RowDefinition Height="Auto"></RowDefinition> 
+                               <RowDefinition Height="Auto"></RowDefinition> 
+             </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0"  FontSize="Medium"
+                   Text="Jamaheeri takles a percentage of the funds to help maintain our commitment to serving you." 
+                   LineBreakMode="WordWrap"/>
+                <Entry Grid.Row="1" Placeholder="15%(1,50)" 
+                       PlaceholderColor="Black" />
+                <Label Grid.Row="2" Text="Total Charge:USD 11.50"
+ TextColor="Black" HorizontalOptions="EndAndExpand"/>
+                
+                
+       </Grid>
+            
+            <Grid BackgroundColor="Wheat" RowSpacing="10" Padding="20" >
+            <Grid.RowDefinitions>
+               <RowDefinition Height="Auto"></RowDefinition> 
+                    <RowDefinition Height="Auto"></RowDefinition> 
+                    <RowDefinition Height="Auto"></RowDefinition> 
+                    <RowDefinition Height="Auto"></RowDefinition> 
+                    <RowDefinition Height="Auto"></RowDefinition> 
+                    <RowDefinition Height="Auto"></RowDefinition> 
+                  <RowDefinition Height="*"></RowDefinition> 
+                 
+            </Grid.RowDefinitions>
+            
+            <Entry Grid.Row="0" Placeholder="Full Name" />
+                <Entry Grid.Row="1" Placeholder="Last Name" />
+                 <Entry Grid.Row="2" Placeholder="Last Name" />
+                 <Entry Grid.Row="3" Placeholder="Country" />
+              
+            
+        <local:CustomButtons Grid.Row="4"  
+                             CustomBorderColor="#ffffcc"
+                            
+                                 CustomBackgroundColor="Orange" Text="Continue"
+                                 TextColor="White" CustomBorderRadius="4" 
+                             FontSize="Medium"
+                             CustomBorderWidth="4" 
+                             Command="{Binding DonateBtnCommand}"
+             
+                             
+                             VerticalOptions="Center" />
+                <Label Grid.Row="5"
+                       Text="By continuing you are agree to the terms and conditions of Jamaheeri and acknowledge receipt of our privacy policy" 
+                       TextColor="Black" LineBreakMode="WordWrap"/>
+       </Grid>
+        </StackLayout>
+      
+        </ScrollView>
+</ContentPage>

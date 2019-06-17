@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CampgaignPOC.OverviewPage"
+             xmlns:vm="clr-namespace:CampgaignPOC.ViewModal" 
+             xmlns:local="clr-namespace:CampgaignPOC.Helper">
+    
+    
+    
+    
+    
+    
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="TitleTemplate">
+                <ViewCell Height="50">
+                    <Label Text="TitleTemplate"
+                           TextColor="Red"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    
+                    
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="GoalTemplate">
+                <ViewCell Height="50">
+                    <Label Text="GoalTemplate"
+                           TextColor="Blue"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="CampaignTemplate">
+                <ViewCell Height="50">
+                    <Label Text="CampaignTemplate"
+                           TextColor="Green"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="CategoryTemplate">
+                <ViewCell Height="50">
+                    <Label Text="CategoryTemplate"
+                           TextColor="Yellow"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="LocationTemplate">
+                <ViewCell Height="50">
+                    <Label Text="LocationTemplate"
+                           TextColor="Black"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="SettingsTemplate">
+                <ViewCell Height="50">
+                    <Label Text="SettingsTemplate"
+                           TextColor="Purple"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                
+                </ViewCell>
+            </DataTemplate>
+            
+            
+            
+
+            <local:EditCampaignTemplateSelector x:Key="MainTemplate"
+                                                TitleTemplate="{StaticResource TitleTemplate}"
+                                                GoalTemplate="{StaticResource GoalTemplate}"
+                                                CampaignTemplate="{StaticResource CampaignTemplate}"
+                                                CategoryTemplate="{StaticResource CategoryTemplate}"
+                                                LocationTemplate="{StaticResource LocationTemplate}"
+                                                SettingsTemplate="{StaticResource SettingsTemplate}">
+            </local:EditCampaignTemplateSelector>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical"
+                 Padding="20">
+        <Label Text="{Binding Title}"
+               TextColor="Teal"
+               FontSize="Medium" />
+        <ListView RowHeight="50" x:Name="EditCampaignList"
+                  HasUnevenRows="true"
+                  ItemTemplate="{StaticResource MainTemplate}">
+        </ListView>
+    </StackLayout>
+</ContentPage>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <!-- <ContentPage.BindingContext>
+        <vm:OverviewVM>
+        </vm:OverviewVM>
+    </ContentPage.BindingContext>
+    
+    
+    <ListView ItemsSource="{Binding Items}" 
+              BackgroundColor="White" HasUnevenRows="false">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell Height="70">
+                    
+                    <Grid RowSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="{Binding Header}" />
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="2" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <local:CustomEntry Grid.Column="0" Placeholder="{Binding TitleName}" HorizontalTextAlignment="Center" PlaceholderColor="Black" EntryID="1">
+                                </local:CustomEntry>
+                            </Grid>
+                            <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green" />
+                        </Grid>
+                        <Label Grid.Row="3" Text="Goal" />
+                        <Grid Grid.Row="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="$1000" HorizontalOptions="StartAndExpand" TextColor="Black" />
+                                <Image Grid.Column="1" Source="usd.png" HeightRequest="30" HorizontalOptions="EndAndExpand" WidthRequest="30">
+                                </Image>
+                            </Grid>
+                        </Grid>
+                        <Label Grid.Row="5" Text="Campgain Link" />
+                        <Label Grid.Row="6" Text="http://link/campgaing" />
+                        <Label Grid.Row="7" Text="Jamaheri.com/SocialNoga" />
+                        <Label Grid.Row="8" LineBreakMode="WordWrap" Text="The Link can be changed only once.Vhanging your link  does not break you previour link" />
+                        <Label Grid.Row="9" Text="Category" />
+                        <Label Grid.Row="10" Text="Medical/Illness/Health" />
+                        <Label Grid.Row="11" Text="Location" />
+                        <Label Grid.Row="12" Text="USA,Chicago,Illinois 60625" />
+                        <Label Grid.Row="13" Text="Settings" />
+                        <Grid Grid.Row="14" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>      
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="50" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="Allow user to leave public comments on my campgain" 
+                                   LineBreakMode="WordWrap"  />
+                            <Switch Grid.Column="1" IsToggled="true" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>-->

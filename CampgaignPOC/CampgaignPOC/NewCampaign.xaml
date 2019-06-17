@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CampgaignPOC.NewCampaign"
+                  xmlns:local="clr-namespace:CampgaignPOC"
+                        xmlns:controls="clr-namespace:CampgaignPOC"
+             BackgroundColor="Wheat">
+  <ScrollView>
+      
+      <Grid Padding="30" RowSpacing="20">
+           <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            
+               <RowDefinition Height="Auto"></RowDefinition>
+                   <RowDefinition Height="Auto"></RowDefinition>
+                 <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                 </Grid.RowDefinitions> 
+            
+            
+            <Label Grid.Row="0" Text="Story" FontSize="Medium"/>
+            <Label Grid.Row="1" LineBreakMode="WordWrap"
+                   Text="Tell your story.Describe who you are.Explain who you are raising money for"
+                   TextColor="Gray"/>
+            <ImageButton x:Name="image" Grid.Row="2" 
+                         Source="imageUpload.png" 
+                         Clicked="TakePhoto_Clicked" 
+                         VerticalOptions="Center" 
+                         HeightRequest="150" 
+                         TabIndex="1"
+                         ></ImageButton>
+            
+            
+            
+   
+              
+        <controls:ExtendedEditorControl 
+                                       Grid.Row="3"
+                                       HasRoundedCorner="true"
+                                       IsExpandable="true"
+                                       Placeholder="How to wrap placeholder??Tell your story.Describe who you are.Explain who you are raising money for"
+                                       PlaceholderColor="Gray"
+                                       BackgroundColor="White"
+                                       HorizontalOptions="FillAndExpand"
+                                       HeightRequest="80"/>
+            
+            
+            <local:CustomButtons Grid.Row="4"    Command="{Binding NextCommand}" 
+                             CustomBorderColor="#ffffcc"
+                            
+                                 CustomBackgroundColor="Orange" Text="Next"
+                                 TextColor="White" CustomBorderRadius="4" 
+                             FontSize="Medium"
+                             CustomBorderWidth="4" 
+            
+                             
+                             VerticalOptions="Center" > </local:CustomButtons>
+          
+        </Grid> 
+        
+          
+            <!--<Grid ColumnSpacing="16" Margin="0,8" Padding="40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="HiddenLabel" FontSize="10" IsVisible="False" Margin="0"/>
+            <local:BorderlessEntry x:Name="EntryField" 
+                                   Text="{Binding Text, Mode=TwoWay}" Margin="0,12,0,0"/>
+            <BoxView x:Name="BottomBorder"
+                     BackgroundColor="Gray"  Grid.Row="1" 
+                     HeightRequest="1" Margin="0" HorizontalOptions="FillAndExpand"/>
+            <BoxView x:Name="HiddenBottomBorder" 
+                     BackgroundColor="Gray" Grid.Row="1" HeightRequest="1" Margin="0" 
+                     WidthRequest="0" HorizontalOptions="Center"/>
+        </Grid>
+        -->
+        
+        
+    </ScrollView>
+</ContentPage>

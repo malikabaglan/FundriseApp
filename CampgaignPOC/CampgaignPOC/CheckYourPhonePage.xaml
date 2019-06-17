@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                xmlns:local="clr-namespace:CampgaignPOC" 
+             x:Class="CampgaignPOC.CheckYourPhonePage"
+             BackgroundColor="Wheat">
+   
+    
+    
+    <ScrollView>
+        <Grid Padding="30" RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Check You Phone"
+                       FontSize="Large" TextColor="Teal"
+                       HorizontalOptions="CenterAndExpand" />
+                <Image Grid.Column="1" HeightRequest="20" WidthRequest="20" 
+                       HorizontalOptions="End" Source="clear.png"/>
+            </Grid>
+            
+            <Label Grid.Row="1" LineBreakMode="CharacterWrap"
+                   Text="A unique code has been sent to your phone number ending in 2644"
+                   />
+           
+            
+            
+            
+            <Label Grid.Row="2" Text="Need to change the number" TextColor="Red"/>
+            
+            
+            
+               <local:CustomEntry Grid.Row="3"
+                                   
+                                   Placeholder="Secret Code"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+            
+            
+      
+            
+            
+            
+            
+            
+           
+            
+            
+              <Grid Grid.Row="5" ColumnSpacing="20">
+             <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label  Grid.Column="0" Text="Keep device verified fro 30 days"/>
+                <Switch Grid.Column="1" IsToggled="false" HorizontalOptions="End"/>
+            </Grid>
+            
+            
+            
+            
+            
+            <Label Grid.Row="4" HorizontalOptions="Center"
+       VerticalOptions="CenterAndExpand">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Diddn't recieve a code?" />
+            <Span Text="Click here to resend"
+                  TextColor="Red"
+                  TextDecorations="Underline">
+               
+            </Span>
+           
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+            
+            
+            
+            
+            
+            
+              <!--  
+              <Grid Grid.Row="4">
+             <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+              
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label  Grid.Column="0" Text=""/>
+             <Label  Grid.Column="1" Text="" TextColor="Red"/>
+            </Grid>-->
+            
+            
+            
+                   <local:CustomButtons Grid.Row="6"  
+                                
+                             CustomBorderColor="#ffffcc"
+                              CustomBackgroundColor="Orange" 
+                               Text="Verify"
+                                TextColor="White" CustomBorderRadius="4" 
+                                 FontSize="Medium"
+                                  CustomBorderWidth="4" 
+                                    VerticalOptions="Center" 
+                                        Command="{Binding VerifyCommand}"
+                                       />
+            
+            
+            <Grid Grid.Row="7" HorizontalOptions="Start">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                           <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                           <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                   <Label Grid.Column="1" Text="Need help?" HorizontalOptions="Start"/>
+                <Image Grid.Column="0" WidthRequest="20" HeightRequest="20" Source="help.png"/>
+            </Grid>
+            
+            
+         
+            
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CampgaignPOC.TotalRaised" 
+             xmlns:local="clr-namespace:CampgaignPOC"
+       >
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            
+            <Grid Padding="20" RowSpacing="20"
+                  Grid.Row="0" BackgroundColor="Aqua">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Withdrawals"
+                       HorizontalOptions="Start" FontSize="Large" />
+                <Label Grid.Row="1" Text="Title-Social Noga"
+                       HorizontalOptions="Start" TextColor="Gray" />
+            </Grid>
+            
+            
+            
+            <Grid Padding="20"  Grid.Row="1" RowSpacing="20"
+                  BackgroundColor="Lime">
+                
+                <Grid.RowDefinitions>
+                 <RowDefinition Height="Auto" />
+                   <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+    <!--    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+               <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>-->
+                
+                
+                
+                
+                
+               
+                <Label Grid.Row="0" Text="Total raised(after fees)"
+                       HorizontalOptions="CenterAndExpand" />
+             <StackLayout Orientation="Horizontal" Grid.Row="1" HorizontalOptions="Center">
+                                
+                    
+                    <Label  Text="$ 0.00" Font="Bold,50" />
+                </StackLayout>  
+
+                
+                
+                
+                
+                
+                <local:CustomButtons Grid.Row="2"  
+                                     CustomBorderColor="#ffffcc" 
+                                     BackgroundColor="Red"
+                                     CustomBackgroundColor="Orange"
+                                     Text="Set up withdrawals" 
+                                     TextColor="White" 
+                                     CustomBorderRadius="4" 
+                                     FontSize="Medium"
+                                     CustomBorderWidth="4" 
+                                     Command="{Binding SetUpCommand}"
+                                />
+            </Grid>
+            
+            
+            
+            <Grid Grid.Row="2" BackgroundColor="wheat" Padding="20" ColumnSpacing="15">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                          <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+             <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+             <Image Grid.Row="0" Grid.Column="0" Source="Check.png" HeightRequest="30" /> 
+                <Label Grid.Row="0" Grid.Column="1" 
+                       Text="You must set uo withdrawals within 30 days of recieving your first donation,or donations will be paused."
+                       />
+                
+                
+              <Image Grid.Row="1" Grid.Column="0" Source="Check.png" HeightRequest="30" /> 
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="if you do not set up withdrawals within 90 days of your first donation,all donations will be paused."/> 
+                
+                   
+                
+              <Image Grid.Row="2" Grid.Column="0" Source="Check.png" HeightRequest="30" /> 
+                <Label Grid.Row="2" Grid.Column="1" 
+                       Text="Setting up withdrawals will not end your campgains.Your campgain will continue to accept donations "/> 
+                
+                  <Image Grid.Row="3" Grid.Column="0" Source="Check.png" HeightRequest="30" /> 
+                <Label Grid.Row="3" Grid.Column="1" 
+                       Text="Withdrawals to bank account will start arriving in 2-5 business days after setup"/> 
+                
+                
+                          
+                  <Image Grid.Row="4" Grid.Column="0" Source="Check.png" HeightRequest="30" /> 
+                <Label Grid.Row="4" Grid.Column="1" 
+                       Text="Need someone else to withdraw the money?No problem!You can grant them sole access as part of this process"/> 
+           
+            
+                
+                
+            
+                        </Grid>
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

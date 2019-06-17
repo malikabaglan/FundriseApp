@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CampgaignPOC"
+     
+             x:Class="CampgaignPOC.HomePage"
+              BackgroundColor="White">
+   <ScrollView>
+<!--<Grid RowSpacing="10"
+          Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0"
+              ColumnSpacing="8"
+              BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+
+         <local:CustomSearchBar  x:Name="SearchBar"
+                                   FontSize="10"
+                                   HeightRequest="30"
+                                   Placeholder="Search"
+                                   BorderColor="Red"
+                                   BorderWidth="1"
+                                   CornerRadius="5">>
+                    
+                </local:CustomSearchBar>       
+            
+
+                
+                <Image Grid.Column="1"
+                       WidthRequest="24"
+                       HeightRequest="24"
+                       Source="Profile.jpg" />
+                <Image Grid.Column="2"
+                       WidthRequest="24"
+                       HeightRequest="24"
+                       Source="Menu.jpg" />
+            </Grid>
+            <Grid Grid.Row="1"
+              RowSpacing="5"
+                  BackgroundColor="AliceBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" 
+                        Text="Fundraise of the people and causes you care about"
+                        FontSize="24"
+                        FontAttributes="Bold"/>
+        
+        
+                <local:CustomButton Grid.Row="1"
+                                Text="Start a fund"
+                                TextColor="White"
+                                CustomBackgroundColor="ForestGreen"
+                                CustomBorderColor="Transparent"
+                                CustomBorderWidth="0"
+                                CustomBorderRadius="15">
+                </local:CustomButton>
+        
+        
+        
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0"
+                             Orientation="Horizontal"
+                             Padding="5,0,5,0">
+                    <Label Text="Jacksonville, FL 3224"
+                           FontSize="14"
+                           FontFamily="Arial"/>
+                    <Label Text="Change"
+                           TextColor="ForestGreen"
+                           FontSize="8"
+                           FontFamily="Arial"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <CollectionView ItemsSource="{Binding Homes}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" 
+                                         Span="2"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <ContentView Padding="0">
+                                    <Frame Margin="5" 
+                                       VerticalOptions="FillAndExpand">
+                                        <StackLayout Margin="-18">
+                                            <Image Source="{Binding ImageUrl}"
+                                               WidthRequest="75"
+                                               Aspect="AspectFill" />
+
+                                            <Label Text="{Binding Name}"
+                                               FontSize="10"
+                                               FontFamily="Arial"/>
+
+                                            <Label Text="{Binding DonorName}"
+                                               FontSize="12"
+                                               FontFamily="Arial"/>
+
+                                            <Label Text="{Binding DonationTime}"
+                                               FontSize="10"
+                                               FontFamily="Arial"/>
+
+                                            <Label Text="{Binding DonationAmount}"
+                                               FontSize="10"
+                                               FontFamily="Arial"/>
+
+                                            <ProgressBar VerticalOptions="EndAndExpand"
+                                                     ProgressColor="ForestGreen"
+                                                     Progress="{Binding progressValue}" />
+                                        </StackLayout>
+                                    </Frame>
+                                </ContentView>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="3"
+              BackgroundColor="AliceBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0"
+                   HorizontalOptions="Center"
+                   Source="checked.png" />
+                <Image Grid.Column="1"
+                   HorizontalOptions="Center"
+                   Source="checked.png" />
+                <Image Grid.Column="2"
+                   HorizontalOptions="Center"
+                   Source="checked.png" />
+            </Grid>
+        </Grid>-->
+    </ScrollView>
+</ContentPage>

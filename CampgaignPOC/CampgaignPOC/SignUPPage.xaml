@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CampgaignPOC"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="CampgaignPOC.SignUPPage"
+             BackgroundColor="Wheat">
+   
+    
+    
+    
+        
+  <ScrollView>
+        <Grid RowSpacing="20" Padding="30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            
+            
+            <Label Grid.Row="0" Text="Full Name" 
+                   FontSize="Medium" 
+                   HorizontalTextAlignment="Start"  
+                   TextColor="Purple"/>
+            
+            <Grid Grid.Row="1" ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                
+                <local:CustomEntry Grid.Column="0"
+                                   
+                                   Placeholder="First Name"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="Blue"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+        
+                
+                <local:CustomEntry Grid.Column="1"
+                                   
+                                   Placeholder="Last Name"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                   BackgroundColor="White"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+        
+               
+            </Grid>
+            <Label Grid.Row="2" Text="Photo" TextColor="Purple" FontSize="Medium" VerticalTextAlignment="Start"/>
+            
+            <Grid Grid.Row="3" ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+           <controls:CircleImage Grid.Column="0" WidthRequest="75" HeightRequest="75" 
+                                      Aspect="AspectFill" 
+                                      Source="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg">
+                </controls:CircleImage>
+                <Label Text="Remove Photo"  Grid.Column="1"  FontSize="Medium" HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" TextColor="Purple" />
+            </Grid>
+            
+        
+                
+                <local:CustomEntry 
+                                   Grid.Row="4"
+                                   Placeholder="Email Address"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   Image="clear"
+                                   BorderColor="Purple"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+        
+                
+                
+             
+            
+                
+                
+        
+                   
+                
+                <local:CustomEntry Grid.Row="5"
+                                   
+                                   Placeholder="Username"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+        
+                
+                
+
+            <local:CustomPicker Grid.Row="6"  HorizontalOptions="FillAndExpand"
+                          HeightRequest="40"
+                                   WidthRequest="40"
+                     Image="clear"
+                                ImageHeight="20"
+                                ImageWidth="20"
+                                BorderColor="Purple"
+                                TitleColor="Gray"
+                                BorderWidth="1"
+                                BackgroundColor="White"
+                                TextColor="Black"
+                             CornerRadius="5"
+                                IsCurvedCornersEnabled="true"
+                                ImageAlignment="Right"
+                     Title="Language">
+                      <local:CustomPicker.Items>
+                        <x:String>English</x:String> 
+                        <x:String>Russian</x:String>
+                    </local:CustomPicker.Items>
+            </local:CustomPicker> 
+            
+            
+     <local:CustomEntry Grid.Row="7"
+                                   
+                                   Placeholder="Phone Number"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                        
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Image="clear"
+                                   BorderColor="Black"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                   ImageAlignment="Right"
+                                   ImageWidth="20"
+                                   ImageHeight="20">
+                </local:CustomEntry>
+        
+            
+           
+            
+            
+        <local:CustomButtons Grid.Row="8"  Command="{Binding SaveCommand}" 
+                             CustomBorderColor="#ffffcc"
+                            
+                                 CustomBackgroundColor="Orange" Text="Save Changes"
+                                 TextColor="White" CustomBorderRadius="4" 
+                             FontSize="Medium"
+                             CustomBorderWidth="4" 
+             
+                             
+                             VerticalOptions="Center" />
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CampgaignPOC.ReviewCampgaign"
+             xmlns:local="clr-namespace:CampgaignPOC"
+             BackgroundColor="Wheat">
+    <ScrollView>
+        <Grid RowSpacing="10" Padding="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            
+            
+            <Grid Grid.Row="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="edit.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                    <local:CustomEntry Grid.Column="1" Placeholder="Title"
+                                      
+                                       HorizontalTextAlignment="Center" PlaceholderColor="Gray" EntryID="1">
+                    </local:CustomEntry>
+                    <Image Grid.Column="2" Source="clear.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                </Grid>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green">
+                </BoxView>
+            </Grid>
+            
+            
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="zip.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                    <local:CustomEntry Grid.Column="1" Placeholder="Zip/Postal Code" 
+                                       HorizontalTextAlignment="Center" PlaceholderColor="Gray" EntryID="1">
+                    </local:CustomEntry>
+                    <Image Grid.Column="2" Source="clear.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                </Grid>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green" />
+            </Grid>
+            
+            
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="link.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                    <local:CustomEntry Grid.Column="1" Placeholder="Website" 
+                                       HorizontalTextAlignment="Center"
+                                       PlaceholderColor="Gray" EntryID="1">
+                    </local:CustomEntry>
+                    <Image Grid.Column="2" Source="clear.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                </Grid>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green" />
+            </Grid>
+            
+            
+            <Grid Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="usd.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                    <local:CustomEntry Grid.Column="1" Placeholder="Amount" HorizontalTextAlignment="Center"
+                                       PlaceholderColor="Gray" EntryID="1">
+                    </local:CustomEntry>
+                    <Image Grid.Column="2" Source="clear.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                </Grid>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green" />
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="edit.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                    <local:CustomEntry Grid.Column="1" Placeholder="Category" HorizontalTextAlignment="Center"
+                                       PlaceholderColor="Gray" EntryID="1">
+                    </local:CustomEntry>
+                    <Image Grid.Column="2" Source="clear.png" WidthRequest="20" HeightRequest="20">
+                    </Image>
+                </Grid>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green" />
+            </Grid>
+            
+            <Grid Grid.Row="6" Padding="40">
+            <Label Text="Our products enhance the social behavior."  LineBreakMode="WordWrap" 
+                   FontSize="Large"  TextColor="Black"/>
+            </Grid>
+            
+            <Grid Grid.Row="7" Padding="10">
+            <!--<local:CustomButtons  CustomBorderColor="#ffffcc"
+                                 CustomBackgroundColor="#3b5998" Text="Continue" TextColor="White" 
+                                 CustomBorderRadius="4" CustomBorderWidth="4" VerticalOptions="Center" 
+                                 Command="{Binding ReviewCamCommand}"/>-->
+                
+                <Button Text="Notification Cl"  Command="{Binding ReviewCamCommand}"/>
+                </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
