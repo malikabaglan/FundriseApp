@@ -4,7 +4,7 @@
              x:Class="CampgaignPOC.CampgainGoal"
             
              xmlns:local="clr-namespace:CampgaignPOC" 
-             BackgroundColor="Wheat">
+               BackgroundColor="{StaticResource PageBackgrounfColor}">
  <ScrollView>
    
             <Grid RowSpacing="20" Padding="20">
@@ -50,6 +50,8 @@
                            HeightRequest="20"></Image>
                      <local:CustomEntry  Grid.Column="1"
                               Placeholder="Enter Amount" 
+                                         
+                                   BorderColor="{StaticResource CustomEntryBorderColor}"
                               HorizontalTextAlignment="Center" 
                               PlaceholderColor="Gray"
                               EntryID="1">
@@ -75,7 +77,7 @@
                      Image="select"
                                 ImageHeight="20"
                                 ImageWidth="20"
-                                BorderColor="Purple"
+                                  BorderColor="{StaticResource ButtonBorderColor}"
                                 TitleColor="Gray"
                                 BorderWidth="1"
                                 BackgroundColor="White"
@@ -121,16 +123,17 @@
             <Label Grid.Row="8" Text="By continuing you agree to our terms,conditions and privacy policy" 
                    LineBreakMode="WordWrap"/>
             
-                    <local:CustomButtons  Grid.Row="9" 
-                              x:Name="btnSignin0" 
-                              CustomBorderColor="#ffffcc"
-                              CustomBackgroundColor="#3b5998" 
-                              Text="Continue"
-                              TextColor="White" 
-                              CustomBorderRadius="4" 
-                              CustomBorderWidth="4" 
-                              VerticalOptions="Center"
-                      Command="{Binding ContinueCommand}"/>
+                    <local:CustomButtons  
+                            Grid.Row="9" 
+                            x:Name="btnSignin0" 
+                            CustomBorderColor="{StaticResource ButtonBorderColor}"
+                            CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                            TextColor="{StaticResource ButtonTextColorColor}" 
+                            Text="Continue"
+                            CustomBorderRadius="4" 
+                            CustomBorderWidth="4" 
+                            VerticalOptions="Center"
+                            Command="{Binding ContinueCommand}"/>
         
             
             

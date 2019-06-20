@@ -58,13 +58,13 @@
                 
                 
                 
-                
-                <local:CustomButtons Grid.Row="2"  
-                                     CustomBorderColor="#ffffcc" 
-                                     BackgroundColor="Red"
-                                     CustomBackgroundColor="Orange"
+                 
+                <local:CustomButtons 
+                                     Grid.Row="2"  
+                                     CustomBorderColor="{StaticResource ButtonBorderColor}"
+                                     CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                                     TextColor="{StaticResource ButtonTextColorColor}"
                                      Text="Set up withdrawals" 
-                                     TextColor="White" 
                                      CustomBorderRadius="4" 
                                      FontSize="Medium"
                                      CustomBorderWidth="4" 

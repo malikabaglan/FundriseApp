@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              x:Class="CampgaignPOC.CollectionView"
                xmlns:local="clr-namespace:CampgaignPOC" 
              xmlns:controls="clr-namespace:CampgaignPOC"
-             BackgroundColor="Wheat">
+              xmlns:views="clr-namespace:CampgaignPOC"
+             BackgroundColor="Wheat"
+             ios:Page.UseSafeArea="true">
+    
+    
+    <StackLayout Spacing="0" Orientation="Vertical">
+    <views:NavigationHeaderView HeightRequest="54"
+                                
+                                    BackButtonImage="clear.png"
+                                    NavigationTitle="Login Page"
+                                    Command="{Binding StartFundCommand}">
+        </views:NavigationHeaderView>
+    
+
     
     <ScrollView>
                    
@@ -42,13 +56,15 @@
  />
             
             
-             <local:CustomButtons Grid.Row="3" Margin="0,0,0,200"
-                             CustomBorderColor="#ffffcc"
-                             CustomBackgroundColor="Orange" 
+             <local:CustomButtons 
+                             Grid.Row="3" 
+                             Margin="0,0,0,200"
+                             CustomBorderColor="{StaticResource ButtonBorderColor}"
+                             CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                             TextColor="{StaticResource ButtonTextColorColor}"
                              Text="Submit"
-                             TextColor="White" 
                              CustomBorderRadius="4"
-                                   Command="{Binding StartFundCommand}"
+                             Command="{Binding StartFundCommand}"
                              CustomBorderWidth="4" 
                              VerticalOptions="Center"/>
             
@@ -123,4 +139,5 @@ TextColor="Black" CustomBorderRadius="4" CustomBorderWidth="4" VerticalOptions="
 
           </Grid>-->
         </ScrollView>
+        </StackLayout>
 </ContentPage>

@@ -75,11 +75,13 @@
                  <Entry Grid.Row="3" Placeholder="Country" />
               
             
-        <local:CustomButtons Grid.Row="4"  
-                             CustomBorderColor="#ffffcc"
-                            
-                                 CustomBackgroundColor="Orange" Text="Continue"
-                                 TextColor="White" CustomBorderRadius="4" 
+        <local:CustomButtons 
+                             Grid.Row="4"  
+                             CustomBorderColor="{StaticResource ButtonBorderColor}"
+                             CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                             TextColor="{StaticResource ButtonTextColorColor}" 
+                             Text="Continue"
+                             CustomBorderRadius="4" 
                              FontSize="Medium"
                              CustomBorderWidth="4" 
                              Command="{Binding DonateBtnCommand}"

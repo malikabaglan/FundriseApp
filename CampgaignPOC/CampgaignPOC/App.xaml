@@ -5,5 +5,28 @@
     xmlns:prism="clr-namespace:Prism.Autofac;assembly=Prism.Autofac.Forms"
     x:Class="CampgaignPOC.App">
     <Application.Resources>
+    <ResourceDictionary >
+            
+            
+ 
+        <Color x:Key="PageBackgrounfColor">#FFDAB9</Color>   
+            <Color x:Key="ButtonBackgrounfColor">#FF8C00</Color> 
+            <Color x:Key="ButtonBorderColor">#FFFFCC</Color>
+              <Color x:Key="CustomEntryBorderColor">#87CEFA</Color>
+                <Color x:Key="ButtonTextColorColor">White</Color>
+ 
+            
+        
+ 
+                
+        
+          
+        
+        </ResourceDictionary>    
+        
+        
+        
+        
+        
     </Application.Resources>
 </prism:PrismApplication>

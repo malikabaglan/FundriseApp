@@ -120,16 +120,17 @@
             
             
             
-                   <local:CustomButtons Grid.Row="7"  
-                                
-                             CustomBorderColor="#ffffcc"
-                              CustomBackgroundColor="Orange" 
-                               Text="Submit phone number"
-                                TextColor="White" CustomBorderRadius="4" 
-                                 FontSize="Medium"
-                                  CustomBorderWidth="4" 
-                                    VerticalOptions="Center" 
-                                        Command="{Binding SentTheCode}"/>
+                   <local:CustomButtons 
+                        Grid.Row="7"  
+                        CustomBorderColor="{StaticResource ButtonBorderColor}"
+                        CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                        TextColor="{StaticResource ButtonTextColorColor}" 
+                        Text="Submit phone number"
+                        CustomBorderRadius="4" 
+                        FontSize="Medium"
+                        CustomBorderWidth="4" 
+                        VerticalOptions="Center" 
+                        Command="{Binding SentTheCode}"/>
             
             
             

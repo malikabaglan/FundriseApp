@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:CampgaignPOC" 
              x:Class="CampgaignPOC.View.MainPage"
-             BackgroundColor="Wheat">
+                   BackgroundColor="{StaticResource PageBackgrounfColor}"
+         >
     
     <ScrollView>
              <Grid>
+            
         <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -34,7 +36,7 @@
 
   <local:CustomEntry Grid.Column="0"
                                    
-                                   Placeholder="Uaename"
+                                   Placeholder="Username"
                                    PlaceholderColor="Gray"
                                    TextColor="Black"
                                     BackgroundColor="White"
@@ -42,7 +44,7 @@
                                    LineColor="#3380FF"
                                    WidthRequest="40"
                             
-                                   BorderColor="Blue"
+                                   BorderColor="{StaticResource CustomEntryBorderColor}"
                                    BorderWidth="1"
                                    CornerRadius="5"
                                    IsCurvedCornersEnabled="true"
@@ -51,10 +53,24 @@
         
     
         
-        <Entry Grid.Row="1"  Placeholder="Username" HeightRequest="40"/>
+ 
        
-       <Entry Grid.Row="2" Placeholder="Password" HeightRequest="40"/>
-        
+      <local:CustomEntry Grid.Row="2"
+                                   
+                                   Placeholder="Password"
+                                   PlaceholderColor="Gray"
+                                   TextColor="Black"
+                                    BackgroundColor="White"
+                                   HeightRequest="40"
+                                   LineColor="#3380FF"
+                                   WidthRequest="40"
+                            
+                                   BorderColor="{StaticResource CustomEntryBorderColor}"
+                                   BorderWidth="1"
+                                   CornerRadius="5"
+                                   IsCurvedCornersEnabled="true"
+                                 >
+                </local:CustomEntry>
         
         
         <Grid Grid.Row="3" ColumnSpacing="20">
@@ -69,40 +85,45 @@
             
                 <Switch Grid.Column="1" IsToggled="false" />
             <local:CustomButtons 
-                        Grid.Column="2" x:Name="btnSignin1" 
-                        CustomBorderColor="#ffffcc"
+                        
+                        Grid.Column="2" 
+                        CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                        TextColor="{StaticResource ButtonTextColorColor}"
                         Command="{Binding SigninCommand}" 
-                        HeightRequest="40"   
+                        HeightRequest="40" 
+                        x:Name="btnSignin1" 
+                        CustomBorderColor="{StaticResource ButtonBorderColor}"
                         WidthRequest="130"
-                        CustomBackgroundColor="Black" 
                         Text="Sign In"
-                        TextColor="White" 
+               
                         CustomBorderRadius="4"
                         CustomBorderWidth="4" 
-                        VerticalOptions="Center" />
+                        VerticalOptions="Center" /> 
       
      </Grid>
         <local:CustomButtons  Grid.Row="4" 
                               x:Name="btnSignin0" 
-                              CustomBorderColor="#ffffcc"
+                              CustomBorderColor="{StaticResource ButtonBorderColor}"
+                              BorderColor="{StaticResource ButtonTextColorColor}"
                               CustomBackgroundColor="#3b5998" 
                               Text="Sign In with Facebook"
-                              TextColor="White" 
+                              TextColor="{StaticResource ButtonTextColorColor}"
                               CustomBorderRadius="4" 
                               CustomBorderWidth="4" 
                               VerticalOptions="Center"/>
         
         <local:CustomButtons Grid.Row="5"  
                              x:Name="btnSignin" 
-                             CustomBorderColor="#ffffcc"
+                             CustomBorderColor="{StaticResource ButtonBorderColor}"
+                             BorderColor="{StaticResource ButtonTextColorColor}"
                              CustomBackgroundColor="#3393FF" 
                              Text="Sign In with Google"
-                             TextColor="White" 
+                             TextColor="{StaticResource ButtonTextColorColor}"
                              CustomBorderRadius="4" 
                              CustomBorderWidth="4" 
                              VerticalOptions="Center"/>
         
-        
+     
        
     
         

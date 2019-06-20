@@ -16,9 +16,9 @@ namespace CampgaignPOC.ViewModal
 
         private async void SetUpCommandClicked()
         {
-            // await _navigationService.NavigateAsync("OverviewPage");
-         //   await _navigationService.NavigateAsync("HomePage");
-            await _navigationService.NavigateAsync("OverviewPage");
+          
+            //   await _navigationService.NavigateAsync("HomePage");
+       await _navigationService.NavigateAsync("OverviewPage");
         }
     }
 }

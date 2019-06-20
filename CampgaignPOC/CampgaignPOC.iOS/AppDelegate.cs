@@ -24,6 +24,19 @@ namespace CampgaignPOC.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); 
             global::Xamarin.Forms.Forms.Init();
+
+
+
+            // * Status bar properties
+            var statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+            if (statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+            {
+                statusBar.BackgroundColor = UIColor.FromRGB(4, 139, 34);
+                statusBar.TintColor = UIColor.White;
+            }
+
+
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -26,14 +26,14 @@ namespace CampgaignPOC
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModal>();
-            containerRegistry.RegisterForNavigation<SignUPPage, SignUpPageViewModel>();
+       
             containerRegistry.RegisterForNavigation<CollectionView,CVIewModel>();
             containerRegistry.RegisterForNavigation<NewCampaign, NewCampaignViewModel>();
             containerRegistry.RegisterForNavigation<CampgainGoal, CampgainGoalViewModel>();
            
             containerRegistry.RegisterForNavigation<Donate, DonateNowViewModel>();
             containerRegistry.RegisterForNavigation<ReviewCampgaign, ReviewCampVM>();
-            containerRegistry.RegisterForNavigation<Notifications,NotificationsVM>();
+   
           
             containerRegistry.RegisterForNavigation<OverviewPage, OverviewVM>();
             containerRegistry.RegisterForNavigation<Withdrawals, WithdrawalsVM>();
@@ -41,6 +41,7 @@ namespace CampgaignPOC
             containerRegistry.RegisterForNavigation<HomePage, HomePageVM>();
             containerRegistry.RegisterForNavigation<CheckYourPhonePage, CheckYourPhoneVM>();
             containerRegistry.RegisterForNavigation<TotalRaised, TotalRaisedVM>();
+            containerRegistry.RegisterForNavigation<MyUserHomePage, MyUserHomePageVM>();
         }
 
 

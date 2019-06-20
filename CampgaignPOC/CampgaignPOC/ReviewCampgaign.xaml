@@ -140,12 +140,17 @@
             </Grid>
             
             <Grid Grid.Row="7" Padding="10">
-            <!--<local:CustomButtons  CustomBorderColor="#ffffcc"
-                                 CustomBackgroundColor="#3b5998" Text="Continue" TextColor="White" 
-                                 CustomBorderRadius="4" CustomBorderWidth="4" VerticalOptions="Center" 
-                                 Command="{Binding ReviewCamCommand}"/>-->
                 
-                <Button Text="Notification Cl"  Command="{Binding ReviewCamCommand}"/>
+           <local:CustomButtons    
+                             CustomBorderColor="{StaticResource ButtonBorderColor}"
+                             CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                             TextColor="{StaticResource ButtonTextColorColor}"
+                             Text="Continue"  
+                             CustomBorderRadius="4" CustomBorderWidth="4" 
+                             VerticalOptions="Center" 
+                             Command="{Binding ReviewCamCommand}"/>
+                
+    <!--            <Button Text="Notification Cl"  Command="{Binding ReviewCamCommand}"/>-->
                 </Grid>
         </Grid>
     </ScrollView>

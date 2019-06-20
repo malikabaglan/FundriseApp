@@ -19,7 +19,7 @@ namespace CampgaignPOC.ViewModal
         }
         private async void ClickNotification()
         {
-            await _navigationService.NavigateAsync("Notifications");
+            await _navigationService.NavigateAsync("Withdrawals");
         }
     }
 }

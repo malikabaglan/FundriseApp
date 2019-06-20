@@ -45,15 +45,16 @@
                                        HeightRequest="80"/>
             
             
-            <local:CustomButtons Grid.Row="4"    Command="{Binding NextCommand}" 
-                             CustomBorderColor="#ffffcc"
-                            
-                                 CustomBackgroundColor="Orange" Text="Next"
-                                 TextColor="White" CustomBorderRadius="4" 
+            <local:CustomButtons 
+                             Grid.Row="4"    
+                             Command="{Binding NextCommand}" 
+                             CustomBorderColor="{StaticResource ButtonBorderColor}"
+                             CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                             TextColor="{StaticResource ButtonTextColorColor}" 
+                             Text="Next"
+                             CustomBorderRadius="4" 
                              FontSize="Medium"
                              CustomBorderWidth="4" 
-            
-                             
                              VerticalOptions="Center" > </local:CustomButtons>
           
         </Grid> 

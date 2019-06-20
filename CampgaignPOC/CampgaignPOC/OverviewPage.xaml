@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CampgaignPOC.OverviewPage"
              xmlns:vm="clr-namespace:CampgaignPOC.ViewModal" 
-             xmlns:local="clr-namespace:CampgaignPOC.Helper">
+             xmlns:local="clr-namespace:CampgaignPOC.Helper"
+                     
+           >
     
     
     
@@ -11,58 +13,227 @@
     
     
      <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="TitleTemplate">
-                <ViewCell Height="50">
-                    <Label Text="TitleTemplate"
-                           TextColor="Red"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center" />
+        <ResourceDictionary  >
+            <DataTemplate  
+                x:Key="TitleTemplate">
+                <ViewCell  Height="70" >
                     
-                    
+                    <StackLayout  
+                        Margin="0,0,0,20">
+                   <Grid RowSpacing="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label 
+                                Margin="0,10,0,10"
+                            Grid.Row="0" 
+                            Text="Title" 
+                            TextColor="Green"/>
+                        <Label VerticalOptions="End"
+                            Grid.Row="1" 
+                            Text="Social Noga"
+                            TextColor="Black"/>
+                    </Grid> 
+                </StackLayout>
                 </ViewCell>
-            </DataTemplate>
+</DataTemplate>
+            
+            
             <DataTemplate x:Key="GoalTemplate">
-                <ViewCell Height="50">
-                    <Label Text="GoalTemplate"
-                           TextColor="Blue"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center" />
-                </ViewCell>
+                <ViewCell Height="90">
+                   
+         <Grid RowSpacing="10">
+                        
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Label 
+                                      Margin="0,10,0,10"
+                        Grid.Row="0" Text="Goal" TextColor="Green"/>
+                        
+                       <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                       </Grid.RowDefinitions>  
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                        
+                            </Grid.ColumnDefinitions>
+                          <Label Grid.Row="1" 
+                                 Grid.Column="0" 
+                                 Text="$10.000" 
+                                 TextColor="Black" 
+                                 FontSize="Large"/>
+                          <Label Grid.Row="1" 
+                                 Grid.Column="2" 
+                                 HorizontalOptions="EndAndExpand" 
+                                 Text="USD"  
+                                 FontSize="Large" 
+                                 TextColor="Green"/> 
+                        </Grid>
+                     </Grid> 
+                 </ViewCell>
             </DataTemplate>
+            
+            
+            
+            
+            
+            
+            
             <DataTemplate x:Key="CampaignTemplate">
-                <ViewCell Height="50">
-                    <Label Text="CampaignTemplate"
-                           TextColor="Green"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center" />
+                <ViewCell Height="120">
+               <Grid RowSpacing="10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                             <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0"
+                                         Margin="0,10,0,10"
+                               Text="Campgain Link"
+                               TextColor="Green"/>
+                        <Label Grid.Row="1" 
+                               Text="Jamaheeri.com/SocialNoga23" 
+                               TextColor="Black"/>
+                         <Label Grid.Row="2" 
+                                LineBreakMode="WordWrap"
+                               Text="This link can only changed once.Changing your link does not break your previous link" 
+                               TextColor="Gray"/>
+                    </Grid> 
                 </ViewCell>
             </DataTemplate>
-            <DataTemplate x:Key="CategoryTemplate">
-                <ViewCell Height="50">
-                    <Label Text="CategoryTemplate"
-                           TextColor="Yellow"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center" />
+            
+            
+            
+            
+            
+            
+      <DataTemplate x:Key="CategoryTemplate">
+                <ViewCell Height="90">
+                    
+                    
+                      <Grid RowSpacing="10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Margin="0,10,0,10"
+                            Grid.Row="0" 
+                            Text="Category" 
+                            TextColor="Green"/>
+                        <Label 
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="Medical,Illness $ Healing"
+                            TextColor="Black"/>
+                        <Label 
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="🔽"
+                            FontSize="Large"
+                            TextColor="Black"
+                        HorizontalOptions="EndAndExpand"/>
+                    </Grid> 
+                    
                 </ViewCell>
             </DataTemplate>
+            
+            
+            
+            
             <DataTemplate x:Key="LocationTemplate">
-                <ViewCell Height="50">
-                    <Label Text="LocationTemplate"
-                           TextColor="Black"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center" />
+                <ViewCell Height="90">
+                    <Grid RowSpacing="10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                                      Margin="0,10,0,10"
+                            Grid.Row="0" 
+                            Text="Location" 
+                            TextColor="Green"/>
+                        <Label 
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="Chicago,Illinois,USA"
+                            TextColor="Black"/>
+                        <Label 
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="📍"
+                            FontSize="Large"
+                            TextColor="Black"
+                        HorizontalOptions="EndAndExpand"/>
+                    </Grid> 
+                    
                 </ViewCell>
             </DataTemplate>
+            
+            
+            
             <DataTemplate x:Key="SettingsTemplate">
-                <ViewCell Height="50">
-                    <Label Text="SettingsTemplate"
-                           TextColor="Purple"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center" />
+                <ViewCell Height="90">
+                    
+                    
+                   <Grid RowSpacing="10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                  
+                        <Label
+                                      Margin="0,10,0,10"
+                            Grid.Row="0" 
+                            Text="Settings" 
+                            TextColor="Green"/>
+                        
+                        
+                        
+                       <Grid Grid.Row="1">
+                                  <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                              <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                     
+                        <Label 
+                           
+                            Grid.Column="0"
+                            Text="Allow user to leave public comments"
+                            LineBreakMode="WordWrap"
+                            TextColor="Black"
+                        HorizontalOptions="Start"/>
+                        
+                        <Switch 
+                           
+                            Grid.Column="2"
+                      
+                            IsToggled="true"
+                            HorizontalOptions="EndAndExpand"/>
+                               </Grid> 
+                    </Grid> 
                 
                 </ViewCell>
             </DataTemplate>
+            
+            
+            
+        
+            
+            
+            
             
             
             
@@ -73,19 +244,32 @@
                                                 CampaignTemplate="{StaticResource CampaignTemplate}"
                                                 CategoryTemplate="{StaticResource CategoryTemplate}"
                                                 LocationTemplate="{StaticResource LocationTemplate}"
-                                                SettingsTemplate="{StaticResource SettingsTemplate}">
+                                                 SettingsTemplate="{StaticResource SettingsTemplate}"
+                                               >
             </local:EditCampaignTemplateSelector>
+            
+            
         </ResourceDictionary>
+        
+        
     </ContentPage.Resources>
+    
     <StackLayout Orientation="Vertical"
-                 Padding="20">
+                 Padding="15,20" 
+                 
+                
+                 >
         <Label Text="{Binding Title}"
                TextColor="Teal"
                FontSize="Medium" />
-        <ListView RowHeight="50" x:Name="EditCampaignList"
+        <ListView Footer=""
+            Margin="0,0,0,20"
+            RowHeight="70"
+                  x:Name="EditCampaignList"
                   HasUnevenRows="true"
                   ItemTemplate="{StaticResource MainTemplate}">
         </ListView>
+  
     </StackLayout>
 </ContentPage>
 
@@ -101,93 +285,4 @@
     
     
     
-   <!-- <ContentPage.BindingContext>
-        <vm:OverviewVM>
-        </vm:OverviewVM>
-    </ContentPage.BindingContext>
-    
-    
-    <ListView ItemsSource="{Binding Items}" 
-              BackgroundColor="White" HasUnevenRows="false">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell Height="70">
-                    
-                    <Grid RowSpacing="20">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Text="{Binding Header}" />
-                        <Grid Grid.Row="1">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="2" />
-                            </Grid.RowDefinitions>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <local:CustomEntry Grid.Column="0" Placeholder="{Binding TitleName}" HorizontalTextAlignment="Center" PlaceholderColor="Black" EntryID="1">
-                                </local:CustomEntry>
-                            </Grid>
-                            <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green" />
-                        </Grid>
-                        <Label Grid.Row="3" Text="Goal" />
-                        <Grid Grid.Row="4">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="$1000" HorizontalOptions="StartAndExpand" TextColor="Black" />
-                                <Image Grid.Column="1" Source="usd.png" HeightRequest="30" HorizontalOptions="EndAndExpand" WidthRequest="30">
-                                </Image>
-                            </Grid>
-                        </Grid>
-                        <Label Grid.Row="5" Text="Campgain Link" />
-                        <Label Grid.Row="6" Text="http://link/campgaing" />
-                        <Label Grid.Row="7" Text="Jamaheri.com/SocialNoga" />
-                        <Label Grid.Row="8" LineBreakMode="WordWrap" Text="The Link can be changed only once.Vhanging your link  does not break you previour link" />
-                        <Label Grid.Row="9" Text="Category" />
-                        <Label Grid.Row="10" Text="Medical/Illness/Health" />
-                        <Label Grid.Row="11" Text="Location" />
-                        <Label Grid.Row="12" Text="USA,Chicago,Illinois 60625" />
-                        <Label Grid.Row="13" Text="Settings" />
-                        <Grid Grid.Row="14" ColumnSpacing="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>      
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="50" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
-                                   Text="Allow user to leave public comments on my campgain" 
-                                   LineBreakMode="WordWrap"  />
-                            <Switch Grid.Column="1" IsToggled="true" HorizontalOptions="EndAndExpand" />
-                        </Grid>
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-</ContentPage>-->
+   

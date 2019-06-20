@@ -13,6 +13,8 @@ namespace CampgaignPOC
         public CollectionView()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+          
             BindingContext = new CollectionViewModal();
 
         }

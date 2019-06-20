@@ -24,7 +24,7 @@ namespace CampgaignPOC.ViewModal
         public OverviewVM(INavigationService navigationService) : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "Settings Page";
+            Title = "Overview";
         }
     }
 }

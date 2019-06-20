@@ -17,7 +17,7 @@ namespace CampgaignPOC.ViewModal
 
         private async void signinButtonClicked()
         {
-            await _navigationService.NavigateAsync("SignUPPage");
+            await _navigationService.NavigateAsync("MyUserHomePage");
         }
     }
 };

@@ -23,6 +23,7 @@
     <Folder Include="ViewModal\" />
     <Folder Include="CustomRenderers\" />
     <Folder Include="Helper\" />
+    <Folder Include="CustomViews\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="View\ReviewCampgaign.xaml.cs" />

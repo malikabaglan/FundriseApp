@@ -1,16 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:CampgaignPOC"
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:CampgaignPOC"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             x:Class="CampgaignPOC.SignUPPage"
-             BackgroundColor="Wheat">
-   
-    
-    
-    
+            x:Class="CampgaignPOC.MyUserHomePage"
+            >
+ 
+    <ContentPage 
+        Title="Account Information"
+        BackgroundColor="{StaticResource PageBackgrounfColor}"
         
-  <ScrollView>
+  >
+
+    <ContentPage.ToolbarItems >
+            
+              <ToolbarItem  Order="Primary"  Text="Next" Priority="1"  ></ToolbarItem>
+
+        </ContentPage.ToolbarItems>
+        
+        <ScrollView>
+         
         <Grid RowSpacing="20" Padding="30,30">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -85,7 +94,8 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-           <controls:CircleImage Grid.Column="0" WidthRequest="75" HeightRequest="75" 
+           <controls:CircleImage 
+                        Grid.Column="0" WidthRequest="75" HeightRequest="75" 
                                       Aspect="AspectFill" 
                                       Source="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg">
                 </controls:CircleImage>
@@ -187,17 +197,92 @@
            
             
             
-        <local:CustomButtons Grid.Row="8"  Command="{Binding SaveCommand}" 
-                             CustomBorderColor="#ffffcc"
-                            
-                                 CustomBackgroundColor="Orange" Text="Save Changes"
-                                 TextColor="White" CustomBorderRadius="4" 
+        <local:CustomButtons Grid.Row="8"  
+                             CustomBorderColor="{StaticResource ButtonBorderColor}"
+                             CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                             TextColor="{StaticResource ButtonTextColorColor}"
+                             Text="Save Changes"
+                             CustomBorderRadius="4" 
                              FontSize="Medium"
                              CustomBorderWidth="4" 
-             
-                             
                              VerticalOptions="Center" />
             
         </Grid>
     </ScrollView>
-</ContentPage>
+        
+    </ContentPage>
+                 
+                 
+                 
+ <ContentPage
+        Title="Notifications" 
+        BackgroundColor="{StaticResource PageBackgrounfColor}" >
+    
+    
+    
+     <StackLayout Padding="30">
+        <Grid RowSpacing="30">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+               <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+               
+      
+            <Grid Grid.Row="0" ColumnSpacing="40">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Newsletters" 
+                       FontSize="Large" HorizontalOptions="StartAndExpand" />
+                <Switch Grid.Column="1" IsToggled="true" 
+                        HorizontalOptions="EndAndExpand" />
+            </Grid>
+         
+            
+            
+            
+            
+            
+      <Grid Grid.Row="1" ColumnSpacing="40">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                   <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="New Funding Requests" FontSize="Large" 
+                       HorizontalOptions="StartAndExpand" />
+                <Switch Grid.Column="1" IsToggled="true"
+                        HorizontalOptions="EndAndExpand" />
+            </Grid>
+            
+            
+            
+            
+            <local:CustomButtons 
+                          Grid.Row="3" 
+                          CustomBorderColor="{StaticResource ButtonBorderColor}"
+                          CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                          TextColor="{StaticResource ButtonTextColorColor}"
+                          Text="Save Changes" 
+                          CustomBorderRadius="4" 
+                          CustomBorderWidth="4" 
+                          VerticalOptions="Center"
+                          Command="{Binding SaveChangesCommand}"/>
+        </Grid>
+    </StackLayout>
+    
+    </ContentPage>
+    
+    
+
+</TabbedPage>
