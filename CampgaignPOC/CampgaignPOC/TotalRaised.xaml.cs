@@ -10,6 +10,7 @@ namespace CampgaignPOC
         public TotalRaised()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

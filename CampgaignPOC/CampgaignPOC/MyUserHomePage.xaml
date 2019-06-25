@@ -14,7 +14,8 @@
 
     <ContentPage.ToolbarItems >
             
-              <ToolbarItem  Order="Primary"  Text="Next" Priority="1"  ></ToolbarItem>
+              <ToolbarItem  Order="Primary"  
+                            Text="Next" Priority="1"  ></ToolbarItem>
 
         </ContentPage.ToolbarItems>
         

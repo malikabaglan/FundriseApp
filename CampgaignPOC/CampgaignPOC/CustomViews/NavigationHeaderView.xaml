@@ -2,23 +2,25 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CampgaignPOC.NavigationHeaderView"
-              
-             BackgroundColor="ForestGreen"
-             >
+             BackgroundColor="ForestGreen">
   <ContentView.Content>
-        <!--<AbsoluteLayout HorizontalOptions="FillAndExpand" 
-                            VerticalOptions="FillAndExpand">-->
-        <!--<Image Aspect="AspectFill"
-                   Source="Header background image" />-->
-        <StackLayout Orientation="Horizontal" 
-                         Padding="15,5">
 
-            <Image x:Name="Image"
+      <Grid>
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+               <ColumnDefinition Width="*"></ColumnDefinition>
+               <ColumnDefinition Width="*"></ColumnDefinition>
+                
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="Image" Grid.Column="0"
                        WidthRequest="24"
                        HeightRequest="24"
                        VerticalOptions="Center"
                    
                        Source="arrowback.png">
+                
                 
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="ClickedEvent"
@@ -26,16 +28,35 @@
                 </Image.GestureRecognizers>
             </Image>
 
-            <Label x:Name="Title" 
-                       HorizontalOptions="Center"
-                   
-                       Text="Login Page"
-                       TextColor="White"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center" />
-
-        </StackLayout>
-        <!--</AbsoluteLayout>-->
+            <Label 
+                   x:Name="Title" 
+                Grid.Column="1"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                Text="sfsf"
+                   VerticalOptions="Center"/>
+            
+             <Label 
+                   Text="47474"
+                x:Name="TitleTwo" 
+                Grid.Column="2"
+                HorizontalOptions="EndAndExpand"
+                TextColor="White" Margin="0,0,10,0"
+                VerticalOptions="Center"/>
+            
+                 <Label 
+                   Text="576434"
+                x:Name="TitleBack" 
+                Grid.Column="0"
+                HorizontalOptions="StartAndExpand"
+                TextColor="White"
+                VerticalOptions="Center"/>
+            
+      </Grid>
+      
+        
+        
+        
+        
     </ContentView.Content>
 </ContentView>

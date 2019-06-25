@@ -131,6 +131,7 @@
     <AndroidResource Include="Resources\drawable\help.png" />
     <AndroidResource Include="Resources\drawable\Check.png" />
     <AndroidResource Include="Resources\drawable\next.png" />
+    <AndroidResource Include="Resources\drawable\monkey.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

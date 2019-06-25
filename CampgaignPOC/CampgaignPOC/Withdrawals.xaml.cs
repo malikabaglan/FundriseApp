@@ -10,6 +10,7 @@ namespace CampgaignPOC
         public Withdrawals()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

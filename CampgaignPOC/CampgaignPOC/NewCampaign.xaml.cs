@@ -13,6 +13,7 @@ namespace CampgaignPOC
         public NewCampaign()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
 

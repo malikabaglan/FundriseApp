@@ -10,6 +10,7 @@ namespace CampgaignPOC
         public Donate()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

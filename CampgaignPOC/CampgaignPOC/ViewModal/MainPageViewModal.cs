@@ -8,16 +8,22 @@ namespace CampgaignPOC.ViewModal
     {
         private INavigationService _navigationService;
         public DelegateCommand SigninCommand { get; private set; }
-
+        public DelegateCommand RegisterCommand { get; private set; }
         public MainPageViewModal(INavigationService navigationService):base(navigationService)
         {
             _navigationService = navigationService;
             SigninCommand = new DelegateCommand(signinButtonClicked);
+            RegisterCommand = new DelegateCommand(RegisterCommandButtonClicked);
         }
 
         private async void signinButtonClicked()
         {
+            await _navigationService.NavigateAsync("CollectionView");
+        }
+        private async void RegisterCommandButtonClicked()
+        {
             await _navigationService.NavigateAsync("MyUserHomePage");
         }
     }
+
 };

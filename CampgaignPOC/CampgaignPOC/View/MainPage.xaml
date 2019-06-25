@@ -101,7 +101,7 @@
                         VerticalOptions="Center" /> 
       
      </Grid>
-        <local:CustomButtons  Grid.Row="4" 
+        <local:CustomButtons  Grid.Row="6" 
                               x:Name="btnSignin0" 
                               CustomBorderColor="{StaticResource ButtonBorderColor}"
                               BorderColor="{StaticResource ButtonTextColorColor}"
@@ -125,7 +125,18 @@
         
      
        
-    
+            <local:CustomButtons  Grid.Row="4" 
+           
+                              CustomBorderColor="{StaticResource ButtonBorderColor}"
+                              BorderColor="{StaticResource ButtonTextColorColor}"
+                              CustomBackgroundColor="#3b5998" 
+                              Text="Register"
+                              TextColor="{StaticResource ButtonTextColorColor}"
+                              CustomBorderRadius="4" 
+                              CustomBorderWidth="4" 
+                              VerticalOptions="Center"
+                              Command="{Binding RegisterCommand}"/>
+        
         
         
   </Grid>

@@ -3,7 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CampgaignPOC.ReviewCampgaign"
              xmlns:local="clr-namespace:CampgaignPOC"
-             BackgroundColor="Wheat">
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:views="clr-namespace:CampgaignPOC"
+             BackgroundColor="{StaticResource PageBackgrounfColor}"
+             ios:Page.UseSafeArea="true">
+    
+    
+        <StackLayout Orientation="Vertical">
+    <views:NavigationHeaderView    
+            HeightRequest="35"
+            NavigationTitle="Review Campgain"
+            NavigationTitleTwo="Next" 
+            NavigationTitleBack="Back"/>
+    
     <ScrollView>
         <Grid RowSpacing="10" Padding="30">
             <Grid.RowDefinitions>
@@ -154,4 +166,5 @@
                 </Grid>
         </Grid>
     </ScrollView>
+        </StackLayout>
 </ContentPage>

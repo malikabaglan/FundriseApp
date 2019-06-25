@@ -10,6 +10,8 @@ namespace CampgaignPOC
         public CampgainGoal()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
     }
 }

@@ -24,6 +24,27 @@ namespace CampgaignPOC
             {
                 Title.Text = NavigationTitle;
             }
+
+
+
+
+
+            if (propertyName == NavigationTwoTitleProperty.PropertyName)
+            {
+                TitleTwo.Text = NavigationTitleTwo;
+            }
+
+
+            if (propertyName == NavigationBackTitleProperty.PropertyName)
+            {
+                TitleBack.Text = NavigationTitleBack;
+            }
+
+
+
+
+
+
         }
 
         //public event EventHandler<EventArgs> Tapped;
@@ -42,6 +63,17 @@ namespace CampgaignPOC
 
         public static readonly BindableProperty CommandProperty = BindableProperty.Create(
             nameof(Command), typeof(ICommand), typeof(NavigationHeaderView), null);
+
+
+        //
+
+        public static readonly BindableProperty NavigationTwoTitleProperty = BindableProperty.Create(
+            nameof(NavigationTitleTwo), typeof(string), typeof(NavigationHeaderView), default(string));
+
+
+
+        public static readonly BindableProperty NavigationBackTitleProperty = BindableProperty.Create(
+    nameof(NavigationTitleBack), typeof(string), typeof(NavigationHeaderView), default(string));
 
         #endregion
 
@@ -63,5 +95,22 @@ namespace CampgaignPOC
             get { return (ICommand)GetValue(CommandProperty); }
             set { SetValue(CommandProperty, value); }
         }
+
+        ///
+        public string NavigationTitleTwo
+        {
+            get { return (string)GetValue(NavigationTwoTitleProperty); }
+            set { SetValue(NavigationTwoTitleProperty, value); }
+        }
+
+
+
+
+        public string NavigationTitleBack
+        {
+            get { return (string)GetValue(NavigationBackTitleProperty); }
+            set { SetValue(NavigationBackTitleProperty, value); }
+        }
+
     }
 }

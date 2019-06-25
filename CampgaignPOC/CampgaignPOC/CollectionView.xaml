@@ -6,17 +6,19 @@
                xmlns:local="clr-namespace:CampgaignPOC" 
              xmlns:controls="clr-namespace:CampgaignPOC"
               xmlns:views="clr-namespace:CampgaignPOC"
-             BackgroundColor="Wheat"
+                     BackgroundColor="{StaticResource PageBackgrounfColor}"
              ios:Page.UseSafeArea="true">
     
     
     <StackLayout Spacing="0" Orientation="Vertical">
-    <views:NavigationHeaderView HeightRequest="54"
-                                
-                                    BackButtonImage="clear.png"
-                                    NavigationTitle="Login Page"
-                                    Command="{Binding StartFundCommand}">
-        </views:NavigationHeaderView>
+        
+        
+    <views:NavigationHeaderView
+        HeightRequest="35"
+        NavigationTitle="New Campgaign"
+        NavigationTitleTwo="Next" 
+        NavigationTitleBack="Back"
+        Command="{Binding StartFundCommand}"/>
     
 
     

@@ -42,6 +42,7 @@ namespace CampgaignPOC
             containerRegistry.RegisterForNavigation<CheckYourPhonePage, CheckYourPhoneVM>();
             containerRegistry.RegisterForNavigation<TotalRaised, TotalRaisedVM>();
             containerRegistry.RegisterForNavigation<MyUserHomePage, MyUserHomePageVM>();
+            containerRegistry.RegisterForNavigation<MyCampgainsPage, MyCampgainsPageViewModel>();
         }
 
 

@@ -10,6 +10,7 @@ namespace CampgaignPOC
         public ReviewCampgaign()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

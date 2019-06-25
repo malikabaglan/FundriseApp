@@ -2,9 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CampgaignPOC.NewCampaign"
-                  xmlns:local="clr-namespace:CampgaignPOC"
-                        xmlns:controls="clr-namespace:CampgaignPOC"
-             BackgroundColor="Wheat">
+             xmlns:local="clr-namespace:CampgaignPOC"
+             xmlns:controls="clr-namespace:CampgaignPOC"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:views="clr-namespace:CampgaignPOC"
+             BackgroundColor="{StaticResource PageBackgrounfColor}"
+             ios:Page.UseSafeArea="true">
+    
+    
+    
+    <StackLayout  Spacing="0" Orientation="Vertical">
+    <views:NavigationHeaderView    
+            HeightRequest="35"
+            NavigationTitle="Story"
+            NavigationTitleTwo="Next" 
+            NavigationTitleBack="Back"/>
+                                   
+      
+    
+    
   <ScrollView>
       
       <Grid Padding="30" RowSpacing="20">
@@ -79,4 +95,5 @@
         
         
     </ScrollView>
+        </StackLayout>
 </ContentPage>

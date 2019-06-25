@@ -3,8 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
               xmlns:local="clr-namespace:CampgaignPOC"
              x:Class="CampgaignPOC.Donate"
-             BackgroundColor="wHEAT"
-             >
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:views="clr-namespace:CampgaignPOC"
+             BackgroundColor="{StaticResource PageBackgrounfColor}"
+             ios:Page.UseSafeArea="true">
+    
+    
+           <StackLayout Orientation="Vertical">
+    <views:NavigationHeaderView    
+            HeightRequest="35"
+            NavigationTitle="Withdraw"
+            NavigationTitleTwo="Next" 
+            NavigationTitleBack="Back"/>
+    
     <ScrollView>
         <StackLayout>
             
@@ -95,4 +106,5 @@
         </StackLayout>
       
         </ScrollView>
+        </StackLayout>
 </ContentPage>
