@@ -9,6 +9,7 @@ namespace CampgaignPOC
     {
         public VerificationPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

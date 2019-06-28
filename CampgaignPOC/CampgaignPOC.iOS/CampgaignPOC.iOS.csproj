@@ -131,7 +131,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.497661" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
       <Version>3.0.0.5</Version>
@@ -179,5 +179,6 @@
     <BundleResource Include="Resources\Check.png" />
     <BundleResource Include="Resources\next.png" />
     <BundleResource Include="Resources\monkey.jpg" />
+    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
 </Project>

@@ -1,10 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                 xmlns:local="clr-namespace:CampgaignPOC" 
              x:Class="CampgaignPOC.CheckYourPhonePage"
-           BackgroundColor="{StaticResource PageBackgrounfColor}">
+              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:views="clr-namespace:CampgaignPOC"
+             BackgroundColor="{StaticResource PageBackgrounfColor}"
+             ios:Page.UseSafeArea="true"
+    
+Padding="30"           >
 
+    
+    
+          <StackLayout Orientation="Vertical">
+    <views:NavigationHeaderView    
+            HeightRequest="35"
+            NavigationTitle="Withdraw"
+            NavigationTitleTwo="Next" 
+            NavigationTitleBack="Back"/>
+    
+    
     
     <ScrollView>
         <Grid Padding="30" RowSpacing="30">
@@ -164,4 +179,5 @@
             
         </Grid>
     </ScrollView>
+        </StackLayout>
 </ContentPage>

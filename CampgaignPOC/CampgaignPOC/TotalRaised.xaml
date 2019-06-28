@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CampgaignPOC.TotalRaised" 
@@ -22,9 +22,10 @@
     <ScrollView>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
+          <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+           <RowDefinition Height="Auto" />
 
             </Grid.RowDefinitions>
             
@@ -99,6 +100,7 @@
                                             <RowDefinition Height="Auto"/>
                           <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                       
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
              <ColumnDefinition Width="Auto"/>
@@ -132,12 +134,35 @@
                   <Image Grid.Row="4" Grid.Column="0" Source="Check.png" HeightRequest="30" /> 
                 <Label Grid.Row="4" Grid.Column="1" 
                        Text="Need someone else to withdraw the money?No problem!You can grant them sole access as part of this process"/> 
-           
-            
+         
+                
+                </Grid>
                 
                 
-            
-                        </Grid>
+                
+                
+                
+                <Grid Grid.Row="3" Padding="20">
+                                 
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                <local:CustomButtons 
+                                     Grid.Row="0"  
+                                     CustomBorderColor="{StaticResource ButtonBorderColor}"
+                                     CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                                     TextColor="{StaticResource ButtonTextColorColor}"
+                                     Text="Set up automatic withdrawal " 
+                                     CustomBorderRadius="4" 
+                                     FontSize="Medium"
+                                     CustomBorderWidth="4" 
+                                     Command="{Binding SetUpCommand}"
+                    
+                                />
+                
+                
+                </Grid>
+                
             
         </Grid>
     </ScrollView>

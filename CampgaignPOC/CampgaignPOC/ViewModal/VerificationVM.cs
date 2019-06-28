@@ -15,7 +15,7 @@ namespace CampgaignPOC.ViewModal
         }
           private async void SentTheCodeClicked()
         {
-            await _navigationService.NavigateAsync("CheckYourPhonePage");
+       await _navigationService.NavigateAsync("CheckYourPhonePage");
         }
     }
 }

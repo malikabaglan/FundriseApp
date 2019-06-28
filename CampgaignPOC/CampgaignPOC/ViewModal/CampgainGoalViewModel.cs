@@ -15,7 +15,8 @@ namespace CampgaignPOC.ViewModal
         }
         private async void ContinueCommandBtnClicked()
         {
-            await _navagationService.NavigateAsync("Donate");
+            //await _navagationService.NavigateAsync("Donate");
+            await _navagationService.NavigateAsync("ReviewCampgaign");
         }
     }
 }

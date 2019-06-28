@@ -19,7 +19,9 @@ namespace CampgaignPOC
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+         await NavigationService.NavigateAsync("NavigationPage/MainPage");
+          //  await NavigationService.NavigateAsync("NavigationPage/MyAppShellPage");
+
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -43,6 +45,7 @@ namespace CampgaignPOC
             containerRegistry.RegisterForNavigation<TotalRaised, TotalRaisedVM>();
             containerRegistry.RegisterForNavigation<MyUserHomePage, MyUserHomePageVM>();
             containerRegistry.RegisterForNavigation<MyCampgainsPage, MyCampgainsPageViewModel>();
+            containerRegistry.RegisterForNavigation<MyAppShellPage, MyAppShellPageVM>();
         }
 
 

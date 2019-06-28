@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="CampgaignPOC.MyAppShellPage"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+            MasterBehavior="Popover"  
+            xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+            xmlns:local="clr-namespace:CampgaignPOC" 
+            BackgroundColor="{StaticResource PageBackgrounfColor}"
+            ios:Page.UseSafeArea="true">
+   
+  <MasterDetailPage.Master>
+        <ContentPage Padding="35"
+                     BackgroundColor="Wheat"
+                   
+                Title="Leo Head"  > 
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                          <Label  Grid.Column="1" Text="Leo Head" FontSize="Large"></Label>
+                         <controls:CircleImage 
+                            Grid.Column="0" 
+                            Grid.RowSpan="2" 
+                            WidthRequest="75" 
+                            HeightRequest="75" 
+                            Aspect="AspectFill" 
+                            Source="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg">
+                </controls:CircleImage>
+                    </Grid>
+                    
+                    
+                  
+                    
+                    
+                     <local:CustomButtons 
+                       CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                       TextColor="{StaticResource ButtonTextColorColor}"
+                       HeightRequest="40" 
+                       x:Name="btnSignin1" 
+                       CustomBorderColor="{StaticResource ButtonBorderColor}"
+                       WidthRequest="130"
+                       Text="Dashboard"
+                       CustomBorderRadius="4"
+                       CustomBorderWidth="4" 
+                       VerticalOptions="Center" /> 
+                    
+                     <local:CustomButtons 
+                       CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                       TextColor="{StaticResource ButtonTextColorColor}"
+                       HeightRequest="40" 
+                       CustomBorderColor="{StaticResource ButtonBorderColor}"
+                       WidthRequest="130"
+                       Text="My Campgains"
+                       CustomBorderRadius="4"
+                       CustomBorderWidth="4" 
+                       Command="{Binding MyCampgainsCommand}" 
+                       VerticalOptions="Center" /> 
+                    
+                    
+                         
+                     <local:CustomButtons 
+                       CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                       TextColor="{StaticResource ButtonTextColorColor}"
+                       HeightRequest="40" 
+                       CustomBorderColor="{StaticResource ButtonBorderColor}"
+                       WidthRequest="130"
+                       Text="New Campgain"
+                       CustomBorderRadius="4"
+                       CustomBorderWidth="4" 
+                       Command="{Binding NewCampgainCommand}" 
+                       VerticalOptions="Center" /> 
+                    
+                    
+                         
+                     <local:CustomButtons 
+                       CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                       TextColor="{StaticResource ButtonTextColorColor}"
+                       HeightRequest="40" 
+                       CustomBorderColor="{StaticResource ButtonBorderColor}"
+                       WidthRequest="130"
+                       Text="My Donations"
+                       CustomBorderRadius="4"
+                       CustomBorderWidth="4" 
+                       Command="{Binding MyDonationsCommand}" 
+                       VerticalOptions="Center" /> 
+
+                          
+                     <local:CustomButtons 
+                       CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                       TextColor="{StaticResource ButtonTextColorColor}"
+                       HeightRequest="40" 
+                       CustomBorderColor="{StaticResource ButtonBorderColor}"
+                       WidthRequest="130"
+                       Text="Withdraws"
+                       CustomBorderRadius="4"
+                       CustomBorderWidth="4" 
+                       Command="{Binding WithdrawsCommand}" 
+                       VerticalOptions="Center" /> 
+                    
+                           
+                     <local:CustomButtons 
+                       CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
+                       TextColor="{StaticResource ButtonTextColorColor}"
+                       HeightRequest="40" 
+                       CustomBorderColor="{StaticResource ButtonBorderColor}"
+                       WidthRequest="130"
+                       Text="Account Settings"
+                       CustomBorderRadius="4"
+                       CustomBorderWidth="4" 
+                       Command="{Binding AccountSettingsCommand}" 
+                       VerticalOptions="Center" /> 
+
+                   
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+<MasterDetailPage.Detail>
+     <ContentPage Padding="20"> 
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="This is Home "></Label>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+    
+    
+</MasterDetailPage>
+

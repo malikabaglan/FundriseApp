@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:local="clr-namespace:CampgaignPOC.Helper"
             x:Class="CampgaignPOC.MyCampgainsPage"
-             
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+            xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
               xmlns:custom="clr-namespace:CampgaignPOC">
     <!--Pages can be added as references or inline-->
+    
+     
+<!--    how to add NavigationHeader??-->
+    
     
     
     <ContentPage Title="Share"           
@@ -33,6 +36,7 @@
             
            
         <Image 
+                       
                Grid.Row="0"  
                Aspect="Fill" 
                Source="monkey.jpg"/>
@@ -43,6 +47,8 @@
                Grid.Row="2"
                Text="Social Noga"
                Font="Bold,35"/>
+                    
+                    
         <Label Grid.Row="3"
                Text="$0 raised of $10,000 goal"/>
         
@@ -124,7 +130,7 @@
     </ContentPage>
     
     
-  <ContentPage Title="Edit" >
+  <ContentPage Title="Edit" Padding="20" >
    <ContentPage.Resources>
         <ResourceDictionary  >
             <DataTemplate  
@@ -380,8 +386,10 @@
     
     
     
-    <ContentPage Title="Media"
-               />
+    <ContentPage Title="Media" Padding="40"
+              >
+        <Label Text="there will be images "></Label>
+    </ContentPage>
         
         
         

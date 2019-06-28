@@ -18,11 +18,13 @@ namespace CampgaignPOC.ViewModal
 
         private async void signinButtonClicked()
         {
-            await _navigationService.NavigateAsync("CollectionView");
+           // await _navigationService.NavigateAsync("CollectionView");
+            await _navigationService.NavigateAsync("MyAppShellPage");
         }
         private async void RegisterCommandButtonClicked()
         {
-            await _navigationService.NavigateAsync("MyUserHomePage");
+           await _navigationService.NavigateAsync("MyUserHomePage");
+            
         }
     }
 

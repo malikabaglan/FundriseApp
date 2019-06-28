@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CampgaignPOC.ReviewCampgaign"
@@ -13,7 +13,7 @@
     <views:NavigationHeaderView    
             HeightRequest="35"
             NavigationTitle="Review Campgain"
-            NavigationTitleTwo="Next" 
+            NavigationTitleTwo="Submit" 
             NavigationTitleBack="Back"/>
     
     <ScrollView>
@@ -157,13 +157,18 @@
                              CustomBorderColor="{StaticResource ButtonBorderColor}"
                              CustomBackgroundColor="{StaticResource ButtonBackgrounfColor}"
                              TextColor="{StaticResource ButtonTextColorColor}"
-                             Text="Continue"  
+                             Text="Submit your campgain"  
                              CustomBorderRadius="4" CustomBorderWidth="4" 
                              VerticalOptions="Center" 
                              Command="{Binding ReviewCamCommand}"/>
                 
     <!--            <Button Text="Notification Cl"  Command="{Binding ReviewCamCommand}"/>-->
                 </Grid>
+                
+                
+                <Label Grid.Row="8"
+                       Margin="0,10,0,10"
+                       TextColor="Black" Text="Return to Main Dashboard" HorizontalOptions="EndAndExpand"></Label>
         </Grid>
     </ScrollView>
         </StackLayout>

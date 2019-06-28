@@ -15,6 +15,7 @@ namespace CampgaignPOC
         public MyUserHomePage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

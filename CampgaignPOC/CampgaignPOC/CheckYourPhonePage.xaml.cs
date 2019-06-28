@@ -9,6 +9,7 @@ namespace CampgaignPOC
     {
         public CheckYourPhonePage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }
